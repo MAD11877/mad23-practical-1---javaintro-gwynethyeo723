@@ -4,29 +4,38 @@ public class Question5
 {
   public static void main(String[] args)
   {
-    /**
-     * Prompt the user for number. This input indicates the number of integers the user will be entering next. 
-     * Print out the mode (highest occurrence) from the set of integers. 
-     *    e.g.
-     *     > 5
-     *     > 2
-     *     > 4
-     *     > 1
-     *     > 3
-     *     > 4
-     *     4
-     * 
-     *    e.g.
-     *     > 4
-     *     > 2
-     *     > 2
-     *     > 3
-     *     > 3
-     *     2
-     * Hint: Use a loop to get input. Use another 2 loops to find the mode
-     */
      
     Scanner in = new Scanner(System.in);
+    //System.out.print("Enter an whole number: "); //prompting user for number
+    int noOfInt = in.nextInt();
+    int [] numarr = new int[noOfInt];
     
+    for (int i = 0; i<noOfInt; i++) //using a for loop and print out the numbers that the person gave 
+    {
+      int num = in.nextInt();
+      numarr[i] = num; 
+      //System.out.print(">"+num);
+    }
+
+    int max = 0;
+    int mode = 0;
+
+    for (int i = 0; i<noOfInt; i++)
+    {
+      int counter = 0;
+      for (int j = 0; j<noOfInt; j++)
+      {
+        if (numarr[j]==numarr[i]) //comparing the number with other numbers 
+        {
+          counter ++;
+        }
+        if (counter>max) //count which number is repeated the most
+        {
+          max = counter;
+          mode = numarr[i];
+        }
+      }
+    }
+    System.out.println(mode);
   }
 }
