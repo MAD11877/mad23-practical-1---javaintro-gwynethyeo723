@@ -7,15 +7,15 @@ public class Question2
      
     Scanner in = new Scanner(System.in);
 
-    System.out.print("Enter height in metres: ");
+    //System.out.print("Enter height in metres: ");
     double height = in.nextDouble();
 
-    System.out.print("Enter weight in kilograms: ");
+    //System.out.print("Enter weight in kilograms: ");
     double weight = in.nextDouble();
 
     double bmi = weight/(height*height);
     
-    System.out.printf("BMI (to 2 significant figures): %.2f", bmi); 
+    System.out.printf("%.1f", bmi); 
 
   }
 }
