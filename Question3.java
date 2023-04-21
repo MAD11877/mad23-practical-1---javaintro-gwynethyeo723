@@ -14,6 +14,6 @@ public class Question3
     //System.out.print("Enter an integer: ");
     int number = in.nextInt();
     int multiplied = number*number;
-    //System.out.print("The number is "+multiplied);
+    System.out.print(multiplied);
   }
 }
